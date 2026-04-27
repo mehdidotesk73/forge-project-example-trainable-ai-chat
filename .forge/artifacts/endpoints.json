@@ -1,0 +1,211 @@
+{
+  "a1ca4000-0002-0000-0000-000000000001": {
+    "id": "a1ca4000-0002-0000-0000-000000000001",
+    "name": "start_or_resume_session",
+    "kind": "action",
+    "description": "Create a new chat session or resume an existing one. Pass session_id to resume; omit it to create.",
+    "repo": "endpoint_repos.ai_chat_endpoints",
+    "params": [
+      {
+        "name": "title",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "default": "New Chat"
+      },
+      {
+        "name": "mode",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "default": "train"
+      },
+      {
+        "name": "model_id",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "default": "claude-3-5-sonnet-20241022"
+      },
+      {
+        "name": "session_id",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "default": null
+      }
+    ],
+    "path": "/endpoints/a1ca4000-0002-0000-0000-000000000001"
+  },
+  "a1ca4000-0002-0000-0000-000000000002": {
+    "id": "a1ca4000-0002-0000-0000-000000000002",
+    "name": "send_message",
+    "kind": "streaming",
+    "description": "Send a message to the AI. Streams tokens as they arrive. In Train mode may emit skill_saved events when skill files are written.",
+    "repo": "endpoint_repos.ai_chat_endpoints",
+    "params": [
+      {
+        "name": "session_id",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "message",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ],
+    "path": "/endpoints/a1ca4000-0002-0000-0000-000000000002/stream"
+  },
+  "a1ca4000-0002-0000-0000-000000000003": {
+    "id": "a1ca4000-0002-0000-0000-000000000003",
+    "name": "upload_context",
+    "kind": "action",
+    "description": "Inject training material (plain text or URL) into the session history. Only available in Train mode.",
+    "repo": "endpoint_repos.ai_chat_endpoints",
+    "params": [
+      {
+        "name": "session_id",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "content_type",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "content",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ],
+    "path": "/endpoints/a1ca4000-0002-0000-0000-000000000003"
+  },
+  "a1ca4000-0002-0000-0000-000000000004": {
+    "id": "a1ca4000-0002-0000-0000-000000000004",
+    "name": "get_session_messages",
+    "kind": "action",
+    "description": "Return the full message history for a session.",
+    "repo": "endpoint_repos.ai_chat_endpoints",
+    "params": [
+      {
+        "name": "session_id",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ],
+    "path": "/endpoints/a1ca4000-0002-0000-0000-000000000004"
+  },
+  "a1ca4000-0002-0000-0000-000000000005": {
+    "id": "a1ca4000-0002-0000-0000-000000000005",
+    "name": "list_sessions",
+    "kind": "action",
+    "description": "Return all chat sessions ordered by most-recently-updated first.",
+    "repo": "endpoint_repos.ai_chat_endpoints",
+    "params": [],
+    "path": "/endpoints/a1ca4000-0002-0000-0000-000000000005"
+  },
+  "a1ca4000-0002-0000-0000-000000000006": {
+    "id": "a1ca4000-0002-0000-0000-000000000006",
+    "name": "delete_session",
+    "kind": "action",
+    "description": "Permanently delete a session and all its messages.",
+    "repo": "endpoint_repos.ai_chat_endpoints",
+    "params": [
+      {
+        "name": "session_id",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ],
+    "path": "/endpoints/a1ca4000-0002-0000-0000-000000000006"
+  },
+  "a1ca4000-0002-0000-0000-000000000007": {
+    "id": "a1ca4000-0002-0000-0000-000000000007",
+    "name": "list_available_models",
+    "kind": "action",
+    "description": "Return the list of LLM models this module supports.",
+    "repo": "endpoint_repos.ai_chat_endpoints",
+    "params": [],
+    "path": "/endpoints/a1ca4000-0002-0000-0000-000000000007"
+  },
+  "a1ca4000-0002-0000-0000-000000000008": {
+    "id": "a1ca4000-0002-0000-0000-000000000008",
+    "name": "list_skills",
+    "kind": "action",
+    "description": "Return metadata for all available skills (project-local and package defaults).",
+    "repo": "endpoint_repos.ai_chat_endpoints",
+    "params": [],
+    "path": "/endpoints/a1ca4000-0002-0000-0000-000000000008"
+  },
+  "a1ca4000-0002-0000-0000-000000000010": {
+    "id": "a1ca4000-0002-0000-0000-000000000010",
+    "name": "update_session",
+    "kind": "action",
+    "description": "Update the mode and/or model of an existing session. A mode change injects a system message and resets session state.",
+    "repo": "endpoint_repos.ai_chat_endpoints",
+    "params": [
+      {
+        "name": "session_id",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "mode",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "model_id",
+        "type": "string",
+        "required": false,
+        "description": "",
+        "default": null
+      }
+    ],
+    "path": "/endpoints/a1ca4000-0002-0000-0000-000000000010"
+  },
+  "a1ca4000-0002-0000-0000-000000000009": {
+    "id": "a1ca4000-0002-0000-0000-000000000009",
+    "name": "save_config",
+    "kind": "action",
+    "description": "Save a provider API key to the project .env file.",
+    "repo": "endpoint_repos.ai_chat_endpoints",
+    "params": [
+      {
+        "name": "provider",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      },
+      {
+        "name": "api_key",
+        "type": "string",
+        "required": true,
+        "description": "",
+        "default": null
+      }
+    ],
+    "path": "/endpoints/a1ca4000-0002-0000-0000-000000000009"
+  }
+}

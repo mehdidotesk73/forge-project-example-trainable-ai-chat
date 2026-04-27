@@ -1,0 +1,37 @@
+[project]
+name = "forge-project-example-trainable-ai-chat"
+forge_version = "0.1.35"
+
+[[pipelines]]
+id = "a1ca4000-0003-0000-0000-000000000001"
+display_name = "index_skills"
+module = "pipelines.index_skills"
+function = "run"
+
+[[pipelines]]
+id = "a1ca4000-0003-0000-0000-000000000002"
+display_name = "init_datasets"
+module = "pipelines.init_datasets"
+function = "run"
+
+[[models]]
+class_name = "ChatSession"
+module = "models.models"
+mode = "snapshot"
+
+[[models]]
+class_name = "ChatMessage"
+module = "models.models"
+mode = "snapshot"
+
+[[models]]
+class_name = "SkillIndex"
+module = "models.models"
+mode = "stream"
+
+[[endpoint_repos]]
+module = "endpoint_repos.ai_chat_endpoints"
+
+[[apps]]
+name = "ai-assistant-app"
+path = "./apps/ai-assistant-app"

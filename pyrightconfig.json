@@ -1,0 +1,7 @@
+{
+  "venvPath": "/Users/mehdi/Sandbox/forge-framework",
+  "venv": ".venv",
+  "extraPaths": [
+    "/Users/mehdi/Sandbox/forge-framework/packages/forge-py"
+  ]
+}

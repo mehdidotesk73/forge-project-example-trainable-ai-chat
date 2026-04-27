@@ -1,0 +1,25 @@
+Forge dev server — forge-project-example-trainable-ai-chat
+  API:    http://127.0.0.1:60775/api/health
+  Docs:   http://127.0.0.1:60775/docs
+[! @forge-suite/ts not found — run `npm install` in the app directory after 
+publishing to npm.
+  App : cd ./apps/ai-assistant-app && npm run dev  (run npm run build to serve 
+here)
+
+Press Ctrl+C to stop
+[DEBUG send_message] session=sess-62a7e72a5d1d model=claude-haiku-4-5-20251001 mode=ask msgs=0
+[DEBUG claude_sdk] msg type=SystemMessage
+[DEBUG claude_sdk] msg type=AssistantMessage
+[DEBUG claude_sdk]   block type=ThinkingBlock has_text=False
+[DEBUG claude_sdk] msg type=AssistantMessage
+[DEBUG claude_sdk]   block type=TextBlock has_text=True
+[DEBUG claude_sdk] msg type=ResultMessage
+[DEBUG send_message] stream complete, tokens=1
+[DEBUG send_message] session=sess-62a7e72a5d1d model=claude-haiku-4-5-20251001 mode=ask msgs=0
+[DEBUG claude_sdk] msg type=SystemMessage
+[DEBUG claude_sdk] msg type=AssistantMessage
+[DEBUG claude_sdk]   block type=ThinkingBlock has_text=False
+[DEBUG claude_sdk] msg type=AssistantMessage
+[DEBUG claude_sdk]   block type=TextBlock has_text=True
+[DEBUG claude_sdk] msg type=ResultMessage
+[DEBUG send_message] stream complete, tokens=1

@@ -1,0 +1,46 @@
+{
+  "name": "models",
+  "mode": "snapshot",
+  "backing_dataset_id": "a1ca4000-0001-0000-0000-000000000002",
+  "backing_dataset_name": "a1ca4000-0001-0000-0000-000000000002",
+  "snapshot_dataset_id": "ddcbe7ad-be77-4e57-97f5-867a4fc92d25",
+  "fields": {
+    "id": {
+      "type": "string",
+      "nullable": false,
+      "primary_key": true,
+      "display": "Id",
+      "display_hint": ""
+    },
+    "session_id": {
+      "type": "string",
+      "nullable": false,
+      "primary_key": false,
+      "display": "Session Id",
+      "display_hint": ""
+    },
+    "role": {
+      "type": "string",
+      "nullable": false,
+      "primary_key": false,
+      "display": "Role",
+      "display_hint": ""
+    },
+    "content": {
+      "type": "string",
+      "nullable": false,
+      "primary_key": false,
+      "display": "Content",
+      "display_hint": ""
+    },
+    "created_at": {
+      "type": "string",
+      "nullable": false,
+      "primary_key": false,
+      "display": "Created At",
+      "display_hint": ""
+    }
+  },
+  "primary_key": "id",
+  "built_at": "2026-04-26T22:59:22.530287+00:00"
+}

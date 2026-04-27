@@ -1,0 +1,10 @@
+
+> ai-assistant-app@0.1.0 dev
+> vite --port 60788
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+  VITE v5.4.21  ready in 165 ms
+
+  ➜  Local:   http://localhost:60788/
+  ➜  Network: use --host to expose

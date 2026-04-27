@@ -1,0 +1,10 @@
+/* Project-specific styles — forge.css is imported in main.tsx */
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { min-height: 100vh; }
